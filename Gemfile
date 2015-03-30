@@ -27,6 +27,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # A set of responders modules to dry up your Rails 4.2+ app.
 gem "responders"
 
+# HTML/CSS etc.
+gem 'simple_form'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
