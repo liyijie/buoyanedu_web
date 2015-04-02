@@ -4,6 +4,7 @@ class VideosController < ApplicationController
   respond_to :html
 
   def index
+    @course = Course.find(params[:course_id])
     @videos = Video.all
     respond_with(@videos)
   end
