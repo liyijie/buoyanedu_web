@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150330050717) do
+ActiveRecord::Schema.define(version: 20150402090515) do
 
   create_table "courses", force: :cascade do |t|
     t.string   "title"
@@ -25,8 +25,12 @@ ActiveRecord::Schema.define(version: 20150330050717) do
     t.text     "desc"
     t.string   "teacher"
     t.integer  "course_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+    t.string   "attach_file_name"
+    t.string   "attach_content_type"
+    t.integer  "attach_file_size"
+    t.datetime "attach_updated_at"
   end
 
   add_index "videos", ["course_id"], name: "index_videos_on_course_id"
