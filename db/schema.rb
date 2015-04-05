@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150405051322) do
+ActiveRecord::Schema.define(version: 20150405051702) do
 
   create_table "courses", force: :cascade do |t|
     t.string   "title"
@@ -24,8 +24,12 @@ ActiveRecord::Schema.define(version: 20150405051322) do
     t.string   "desc"
     t.integer  "imageable_id"
     t.string   "imageable_type"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.string   "photo_file_name"
+    t.string   "photo_content_type"
+    t.integer  "photo_file_size"
+    t.datetime "photo_updated_at"
   end
 
   add_index "images", ["imageable_type", "imageable_id"], name: "index_images_on_imageable_type_and_imageable_id"
