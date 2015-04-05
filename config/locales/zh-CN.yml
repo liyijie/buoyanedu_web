@@ -1,2 +1,5 @@
 zh-CN:
-  hello: "Hello world"
+ activerecord:
+    attributes:
+      user:
+        phone: "手机号码"
