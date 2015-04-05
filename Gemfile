@@ -30,6 +30,9 @@ gem "responders"
 # HTML/CSS etc.
 gem 'simple_form'
 
+# Attachment
+gem "paperclip", "~> 4.2"
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
