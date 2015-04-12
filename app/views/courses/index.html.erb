@@ -1,0 +1,30 @@
+<div class="container main-content">
+	<!--carousel-->
+	<div class="row" style="margin-bottom:20px;">
+		<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+			<!-- Indicators -->
+			<ol class="carousel-indicators">
+				<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+				<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+				<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+			</ol>
+			<!-- Wrapper for slides -->
+			<div class="carousel-inner" role="listbox">
+				<div class="item active">
+					<%= image_tag "01index_image.png", alt:"1", class:"photo"%>
+				</div>
+			</div>
+		</div>		
+	</div>
+	<!--course-->
+	<% @courses.each do |course| %>
+		<div class="video-name">
+			<%= image_tag "01index_titleicon.png"%>
+			<span class="num">1</span>
+			<span><%= course.title %></span>
+			<%= link_to 'Show', course_path(course) %>
+    			<%= link_to 'Edit', edit_course_path(course) %>
+			<%= link_to "更多>>", "#", class:"more"%>
+		</div>
+	<% end %>
+</div>
