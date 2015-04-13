@@ -55,3 +55,57 @@
 		}
 	}
 }
+
+//---------------video1------------------
+.video{
+	background-color: $color-video;
+	padding: 10px 0;
+	border-bottom: 2px solid $color-video-border;
+	.introduce{
+		padding: 0 15px;
+	}
+}
+.video-list{
+	background-color: $color-write;
+	padding: 20px 15px !important;
+	.list-title{
+		border-bottom:1px solid $color-gray;
+		.rel{
+			line-height: 59px;
+			padding: 10px 0;
+			font-size: 30px;
+			color: $color-blue;
+			border-bottom: 4px solid $color-blue;
+		}
+	}
+	.list-body{
+		padding: 20px 10px;
+	}
+}
+.dot{
+	border-top: 1px dashed $color-gray;
+}
+//-----------video2------------
+.knowledge{
+	border: 1px solid $color-gray;
+	background-color: $color-write;
+	@media (min-width: 992px) {
+		height: 509px;
+	}
+	@media (min-width: 1200px) {
+		height: 509px;
+	}
+	.k-title{
+		background-color: $color-blue;
+		text-align: center;
+		color: $color-write;
+		font-size: 24px;
+		padding: 10px 0;
+	}
+	.catalog{
+		padding: 20px;
+	}
+}
+.icon-color{
+	color: $color-blue;
+}

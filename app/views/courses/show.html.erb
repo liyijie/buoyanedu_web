@@ -1,5 +1,13 @@
 <div class="container">
-	<strong>course name:</strong><%= @course.title %> |
+	<strong>course name:</strong><%= @course.title %> <br>
+
+	<h2>Videos:</h2>
+	<%= render @course.videos %>
+
+	<h2>Add videos for course:</h2>
+	<%= render "videos/form" %>
+	<br>
+
 	<%= link_to 'Back', courses_path %>
-| <%= link_to 'Edit', edit_course_path(@course) %>
+	| <%= link_to 'Edit', edit_course_path(@course) %>
 </div>

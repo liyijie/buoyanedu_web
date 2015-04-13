@@ -5,7 +5,7 @@ class CoursesController < ApplicationController
 	end
 
 	def new
-		
+		@course = Course.new
 	end
 
 	def create
@@ -31,8 +31,14 @@ class CoursesController < ApplicationController
 		if @course.update(course_params)
 			redirect_to @course
 		else
-			render 'edit'
+			render courses_path
 		end
+	end
+
+	def destroy
+		@course = Course.find(params[:id])
+		@course.destroy
+		 redirect_to courses_path
 	end
 	
 	private
