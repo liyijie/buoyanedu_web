@@ -31,7 +31,7 @@ class CoursesController < ApplicationController
 		if @course.update(course_params)
 			redirect_to admin_course_path
 		else
-			render courses_path
+			render admin_edit_path
 		end
 	end
 

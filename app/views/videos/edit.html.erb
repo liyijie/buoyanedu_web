@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container main-content">
 	<%= form_for([@video.course, @video]) do |f| %>
 	<p>
 		<%= f.label :title %><br>
@@ -24,4 +24,5 @@
 		<%= f.submit %>
 	</p>
 	<% end %>
+	<%= link_to "返回", admin_video_path %>
 </div>

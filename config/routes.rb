@@ -4,7 +4,6 @@ Rails.application.routes.draw do
   get 'admin/video'
   get 'admin/test'
   get 'admin/addcourse'
-  get 'admin/addvideo'
 
     resources :courses do
       resources :videos

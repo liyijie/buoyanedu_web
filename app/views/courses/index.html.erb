@@ -22,9 +22,13 @@
 			<%= image_tag "01index_titleicon.png"%>
 			<span class="num"><%= course.id %></span>
 			<span><%= course.title %></span>
-			<%= link_to 'Show', course_path(course) %>|
+
+<!-- destroy show edit -->
+<!-- 			<%= link_to 'Show', course_path(course) %>|
     			<%= link_to 'Edit', edit_course_path(course) %>|
-    			<%= link_to 'Destroy', course_path(course), method: :delete, data: {confirm: 'Are you sure?' } %>
+    			<%= link_to 'Destroy', course_path(course), method: :delete, data: {confirm: 'Are you sure?' } %> -->
+<!-- destroy show edit -->
+
 			<%= link_to "更多>>", "#", class:"more"%>
 		</div>
 

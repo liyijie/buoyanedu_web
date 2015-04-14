@@ -7,7 +7,7 @@ class VideosController < ApplicationController
 	def create
 		@course  = Course.find(params[:course_id])
 		if @video = @course.videos.create(video_params)
-			redirect_to course_path(@course)
+			redirect_to admin_video_path
 		else
 			render course_path(@course)
 		end
@@ -34,7 +34,7 @@ class VideosController < ApplicationController
 		@course = Course.find(params[:course_id])
 		@video = @course.videos.find(params[:id])
 		if @video.update(video_params)
-			redirect_to course_path(@course)
+			redirect_to admin_video_path
 		else
 			redirect_to course_path(@course)
 		end

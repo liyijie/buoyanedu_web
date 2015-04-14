@@ -1,4 +1,5 @@
 class AdminController < ApplicationController
+	http_basic_authenticate_with name: "admin", password: "123456"
 	def course
 		@courses = Course.all
 	end
@@ -12,9 +13,6 @@ class AdminController < ApplicationController
 
 	def addcourse
 		@course = Course.new
-	end
-
-	def addvideo
 	end
 
 end
