@@ -1,7 +1,7 @@
 <div class="container main-content">
 	<br>
 	<br>
-	<%= form_for :course, url: courses_path do |f| %>
+	<%= simple_form_for :course, url: courses_path do |f| %>
 	
 	<% if @course.errors.any? %>
 		<div id="error_explanation">
@@ -16,12 +16,11 @@
 	<% end %>
 
 	<p>
-		<%= f.label :title %><br>
-		<%= f.text_field :title %>
+		<%= f.input :title, label: '课程名' %>
 	</p>
 
 	<p>
-		<%= f.submit %>
+		<%= f.button :submit %>
 	</p>
 	<% end %>
 
