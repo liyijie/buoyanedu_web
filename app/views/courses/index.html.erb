@@ -20,7 +20,7 @@
 	<% @courses.each do |course| %>
 		<div class="video-name">
 			<%= image_tag "01index_titleicon.png"%>
-			<span class="num">1</span>
+			<span class="num"><%= course.id %></span>
 			<span><%= course.title %></span>
 			<%= link_to 'Show', course_path(course) %>|
     			<%= link_to 'Edit', edit_course_path(course) %>|
