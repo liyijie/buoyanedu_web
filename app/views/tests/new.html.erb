@@ -1,0 +1,34 @@
+<div class="container mian-content">
+	<h2>添加测试作业：</h2>
+	<%= form_for([@video, @video.tests.build]) do |f|%>
+		<p>
+			<%= f.label :title %><br>
+			<%= f.text_area :title %>
+		</p>
+		<p>
+			<%= f.label :A %><br>
+			<%= f.text_area :A %>
+		</p>
+		<p>
+			<%= f.label :B %>
+			<%= f.text_area :B%>
+		</p>
+		<p>
+			<%= f.label :C %>
+			<%= f.text_area :C %>
+		</p>
+		<p>
+			<%= f.label :D%>
+			<%= f.text_area :D%>
+		</p>
+		<p>
+			<%= f.label :answer %>
+			<%= f.text_field :answer %>
+		</p>
+		<p>
+			<%= f.submit %>
+		</p>
+	<% end %>
+
+	<%= link_to "返回", @video %>
+</div>
