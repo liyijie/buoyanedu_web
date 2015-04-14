@@ -5,9 +5,11 @@ Rails.application.routes.draw do
   get 'admin/test'
   get 'admin/addcourse'
 
-    resources :courses do
-      resources :videos
-    end
+  resources :courses do
+    resources :videos
+  end
+
+  resources :user
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
