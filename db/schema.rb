@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150414122054) do
+ActiveRecord::Schema.define(version: 20150415032715) do
 
   create_table "courses", force: :cascade do |t|
     t.string   "title"
@@ -20,12 +20,13 @@ ActiveRecord::Schema.define(version: 20150414122054) do
   end
 
   create_table "tests", force: :cascade do |t|
-    t.text     "title"
-    t.text     "A"
-    t.text     "B"
-    t.text     "C"
-    t.text     "D"
+    t.string   "problem"
+    t.string   "option_a"
+    t.string   "option_b"
+    t.string   "option_c"
+    t.string   "option_d"
     t.string   "answer"
+    t.string   "score"
     t.integer  "video_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
